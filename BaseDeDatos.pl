@@ -18,3 +18,12 @@
 
 
 %Porcion de mariano
+
+enfermedad(Calculos Biliales)
+
+sintoma(Calculos Biliales, Fiebre).
+sintoma(Calculos Biliales, Vomitos).
+
+tratamiento(Calculos Biliales, Cirugia).
+
+cuidado(Calculos Biliales, Evitar el Sobrepeso).
