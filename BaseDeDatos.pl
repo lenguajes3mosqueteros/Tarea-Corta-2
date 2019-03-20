@@ -1,2 +1,3 @@
 consulta(X).
-%prueba de mariano 
+%prueba de mariano
+%prueba de daniel
