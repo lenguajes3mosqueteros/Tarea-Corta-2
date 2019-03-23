@@ -7,9 +7,89 @@
 
 %Porcion de daniel
 
+enfermedad("Diabetes").
 
+sintoma("Diabetes", "Aumento de sed y orina").
+sintoma("Diabetes", "Aumento del apetito").
+sintoma("Diabetes", "Fatiga").
+sintoma("Diabetes", "Vision borrosa").
+sintoma("Diabetes", "Perdida de peso").
 
+tratamiento("Diabetes", "Metformina").
+tratamiento("Diabetes", "Sulindaco").
+tratamiento("Diabetes", "Insulina").
 
+cuidado("Diabetes", "Comer sanamente").
+cuidado("Diabetes", "Hacer ejercicio").
+cuidado("Diabetes", "Revisar el azúcar en la sangre").
+cuidado("Diabetes", "Controlar el peso").
+cuidado("Diabetes", "Visitar al médico con regularidad").
+
+enfermedad("Hipertensión").
+
+sintoma("Hipertensión", "Dolor de cabeza").
+sintoma("Hipertensión", "Dificultad para respirar").
+sintoma("Hipertensión", "Sangrado nasal").
+
+tratamiento("Hipertensión", "Enapranil").
+tratamiento("Hipertensión", "Ibersartan").
+
+cuidado("Hipertensión", "Disminuir consumo de sal").
+cuidado("Hipertensión", "Hacer ejercicio").
+cuidado("Hipertensión", "Mantener un peso adecuado").
+cuidado("Hipertensión", "No beber mucho alcohol").
+
+enfermedad("Asma").
+
+sintoma("Asma", "Tos, con o sin flema").
+sintoma("Asma", "Tiraje de piel al respirar").
+sintoma("Asma", "Dificultad al respirar").
+
+tratamiento("Asma", "Salbutamol").
+tratamiento("Asma", "Ambuterol").
+tratamiento("Asma", "Salmeterol").
+tratamiento("Asma", "Bromuro de tiotropio").
+
+cuidado("Asma", "Conocer sus síntomas").
+cuidado("Asma", "Tomar lecturas").
+cuidado("Asma", "Conocer sus desencadenantes").
+cuidado("Asma", "Cuidarse al hacer ejercicio").
+
+enfermedad("Dislipidemia").
+
+sintoma("Dislipidemia", "Xantomas").
+sintoma("Dislipidemia", "Anillos opacos en el borde de la cornea").
+sintoma("Dislipidemia", "Hipertrofia del hígado o del bazo").
+sintoma("Dislipidemia", "Dificultad respiratoria").
+sintoma("Dislipidemia", "Riesgo de pancreatitis").
+
+tratamiento("Dislipidemia", "Análisis de sangre para el colesterol").
+tratamiento("Dislipidemia", "Realizar el perfil lipídico").
+tratamiento("Dislipidemia", "Uso de estaminas").
+tratamiento("Dislipidemia", "Uso de hipolipemiantes").
+
+cuidado("Dislipidemia", "Perder peso").
+cuidado("Dislipidemia", "Hacer ejercicio").
+cuidado("Dislipidemia", "Disminuir las grasas saturadas").
+cuidado("Dislipidemia", "Chequeos cada cierto tiempo").
+
+enfermedad("Cefalea").
+
+sintoma("Cefalea", "Dolor de cabeza").
+sintoma("Cefalea", "Edema palpebral").
+sintoma("Cefalea", "Espasmos faciales").
+sintoma("Cefalea", "Enrojecimiento de ojos").
+sintoma("Cefalea", "Vertigo").
+
+tratamiento("Cefalea", "Acetaminofen").
+tratamiento("Cefalea", "Antidepresivos como prevencion").
+tratamiento("Cefalea", "Analgesicos antiinflamatorios").
+
+cuidado("Cefalea", "Llevar una vida ordenada").
+cuidado("Cefalea", "Realizar ejercicio").
+cuidado("Cefalea", "Habitos de alimentacion saludables").
+cuidado("Cefalea", "Evitar el alcohol y el tabaco").
+cuidado("Cefalea", "Evitar el abuso de medicación y cafeína").
 
 %Porcion de Karla
 enfermedad("Migraña")
@@ -101,6 +181,22 @@ cuidado("Fibromialgia", "Fortaleza muscular").
 cuidado("Fibromialgia", "Controlar el estrés").
 cuidado("Fibromialgia", "Evitar la fatiga").
 
+o --> sn(_Gen2,Num), sv(Num).
+sn(Gen,Num) --> det(Gen,Num), n(Gen,Num).
+sv(Num) --> vt(Num), sn(_Gen,_Num2).
+sv(Num) --> vi(Num).
+det(f,sg) --> [la]; [una].
+det(f,pl) --> [las]; [unas].
+det(m,sg) --> [el]; [un].
+det(m,pl) --> [los]; [unos].
+vi(sg) --> [ladra].
+vi(pl) --> [ladran].
+vt(sg) --> [muerde].
+vt(pl) --> [muerden].
+n(f,sg) --> [perra].
+n(f,pl) --> [perras].
+n(m,sg) --> [perro]; [hueso].
+n(m,pl) --> [perros]; [huesos].
 
 
 
