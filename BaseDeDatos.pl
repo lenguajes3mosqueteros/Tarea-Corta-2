@@ -254,16 +254,3 @@ n(m,sg) --> [perro]; [hueso].
 n(m,pl) --> [perros]; [huesos].
 
 
-
-%Porcion de mariano
-%Enfermedad
-
-
-%Sintomas Por Enfermedad
-%Calculos Biliales
-
-
-%Tratamientos Generales
-
-
-%Cuidados Generales
