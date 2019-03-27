@@ -80,139 +80,107 @@ sintoma("Acidez").
 sintoma("Regurgitacion acida").
 sintoma("Dolor de pecho").
 sintoma("Jadeos").
-sintoma("Reflujo Gastroesofagico","Dolor de garganta").
-sintoma("Reflujo Gastroesofagico","Tos").
+sintoma("Dolor de garganta").
+sintoma("Tos").
 
 
 
 %Tratamientos
 
-tratamiento("Diabetes", "Metformina").
-tratamiento("Diabetes", "Sulindaco").
-tratamiento("Diabetes", "Insulina").
-tratamiento("Hipertensión", "Enapranil").
-tratamiento("Hipertensión", "Ibersartan").
-tratamiento("Asma", "Salbutamol").
-tratamiento("Asma", "Ambuterol").
-tratamiento("Asma", "Salmeterol").
-tratamiento("Asma", "Bromuro de tiotropio").
-tratamiento("Dislipidemia", "Análisis de sangre para el colesterol").
-tratamiento("Dislipidemia", "Realizar el perfil lipídico").
-tratamiento("Dislipidemia", "Uso de estaminas").
-tratamiento("Dislipidemia", "Uso de hipolipemiantes").
-tratamiento("Cefalea", "Acetaminofen").
-tratamiento("Cefalea", "Antidepresivos como prevencion").
-tratamiento("Cefalea", "Analgesicos antiinflamatorios").
-tratamiento("Migraña", "Analgésicos").
-tratamiento("Migraña", "Antiinflamatorios").
-tratamiento("Migraña", "Dieta balanceada").
-tratamiento("Migraña", "Acupuntura").
-tratamiento("Migraña", "Masajes").
-tratamiento("Lupus", "Antiinflamatorios no esteroideos").
-tratamiento("Lupus", "Corticoesteroides").
-tratamiento("Lupus", "Inmunodepresores").
-tratamiento("Bronquitis", "Antibióticos").
-tratamiento("Bronquitis", "Antitérmicos").
-tratamiento("Bronquitis", "Inhaladores").
-tratamiento("Bronquitis", "Hidratación").
-tratamiento("Osteoporosis", "Bifosfonatos").
-tratamiento("Osteoporosis", "Calcitonina").
-tratamiento("Osteoporosis", "Raloxifeno").
-tratamiento("Osteoporosis", "Teriparatida").
-tratamiento("Fibromialgia", "Analgésicos").
-tratamiento("Fibromialgia", "Antiinflamatorios").
-tratamiento("Fibromialgia", "Antidepresivos").
-tratamiento("Fibromialgia", "Anti convulsionantes").
-%Calculos Biliales
-tratamiento("Calculos Biliales","Cirugia").
-tratamiento("Calculos Biliales","Analgesicos, antiinflamatorios y en caso de vomitos antiemeticos.").
-tratamiento("Calculos Biliales","Sales biliares").
-%Sindrome del Intestino Irritable
-tratamiento("Sindrome del Intestino Irritable", "Espasmoliticos ").
-tratamiento("Sindrome del Intestino Irritable", "Procinéticos").
-tratamiento("Sindrome del Intestino Irritable", "Antidiarreicos").
-tratamiento("Sindrome del Intestino Irritable", "Laxantes").
-tratamiento("Sindrome del Intestino Irritable", "Antidepresivos").
-tratamiento("Sindrome del Intestino Irritable", "Ansiolíticos ").
-%Enfermedad Celiaca
-tratamiento("Enfermedad Celiaca","Disminuir el contenido de Gluten de los Alimentos").
-%Colitis Ulserosa
-tratamiento("Colitis Ulserosa","Medicamentos antiinflamatorios").
-tratamiento("Colitis Ulserosa","Azatioprina").
-tratamiento("Colitis Ulserosa","Antibioticos").
-tratamiento("Colitis Ulserosa","Medicamentos antidiarreicos").
-tratamiento("Colitis Ulserosa","Cirugia").
-%Reflujo Gastroesofagico
-tratamiento("Reflujo Gastroesofagico","Antiacidos").
-tratamiento("Reflujo Gastroesofagico", "Inhibidores de bomba de protones").
-tratamiento("Reflujo Gastroesofagico", "Medicamentos Procinéticos").
+tratamiento("Metformina").
+tratamiento("Sulindaco").
+tratamiento("Insulina").
+tratamiento("Enapranil").
+tratamiento("Ibersartan").
+tratamiento("Salbutamol").
+tratamiento("Ambuterol").
+tratamiento("Salmeterol").
+tratamiento("Bromuro de tiotropio").
+tratamiento("Análisis de sangre para el colesterol").
+tratamiento("Realizar el perfil lipídico").
+tratamiento("Uso de estaminas").
+tratamiento("Uso de hipolipemiantes").
+tratamiento("Acetaminofen").
+tratamiento("Antidepresivos como prevencion").
+tratamiento("Analgesicos antiinflamatorios").
+tratamiento("Antiinflamatorios").
+tratamiento("Dieta balanceada").
+tratamiento("Acupuntura").
+tratamiento("Masajes").
+tratamiento("Antiinflamatorios no esteroideos").
+tratamiento("Corticoesteroides").
+tratamiento("Inmunodepresores").
+tratamiento("Antibióticos").
+tratamiento("Antitérmicos").
+tratamiento("Inhaladores").
+tratamiento("Hidratación").
+tratamiento("Bifosfonatos").
+tratamiento("Calcitonina").
+tratamiento("Raloxifeno").
+tratamiento("Teriparatida").
+tratamiento("Antidepresivos").
+tratamiento("Anti convulsionantes").
+tratamiento("Cirugia").
+tratamiento("Sales biliares").
+tratamiento("Espasmoliticos").
+tratamiento("Procinéticos").
+tratamiento("Antidiarreicos").
+tratamiento("Laxantes").
+tratamiento("Ansiolíticos").
+tratamiento("Disminuir el contenido de Gluten de los Alimentos").
+tratamiento("Azatioprina").
+tratamiento("Antiacidos").
+tratamiento("Inhibidores de bomba de protones").
+tratamiento("Medicamentos Procinéticos").
 
 
 %Cuidados
 
-cuidado("Diabetes", "Comer sanamente").
-cuidado("Diabetes", "Hacer ejercicio").
-cuidado("Diabetes", "Revisar el azúcar en la sangre").
-cuidado("Diabetes", "Controlar el peso").
-cuidado("Diabetes", "Visitar al médico con regularidad").
-cuidado("Hipertensión", "Disminuir consumo de sal").
-cuidado("Hipertensión", "Hacer ejercicio").
-cuidado("Hipertensión", "Mantener un peso adecuado").
-cuidado("Hipertensión", "No beber mucho alcohol").
-cuidado("Asma", "Conocer sus síntomas").
-cuidado("Asma", "Tomar lecturas").
-cuidado("Asma", "Conocer sus desencadenantes").
-cuidado("Asma", "Cuidarse al hacer ejercicio").
-cuidado("Dislipidemia", "Perder peso").
-cuidado("Dislipidemia", "Hacer ejercicio").
-cuidado("Dislipidemia", "Disminuir las grasas saturadas").
-cuidado("Dislipidemia", "Chequeos cada cierto tiempo").
-cuidado("Cefalea", "Llevar una vida ordenada").
-cuidado("Cefalea", "Realizar ejercicio").
-cuidado("Cefalea", "Habitos de alimentacion saludables").
-cuidado("Cefalea", "Evitar el alcohol y el tabaco").
-cuidado("Cefalea", "Evitar el abuso de medicación y cafeína").
-cuidado("Migraña", "No fumar").
-cuidado("Migraña", "No beba alcohol").
-cuidado("Migraña", "Ejercicio físico").
-cuidado("Migraña", "Manejar el estrés").
-cuidado("Lupus", "No exponerse al sol").
-cuidado("Lupus", "Lavarse las manos").
-cuidado("Lupus", "Hidratarse").
-cuidado("Lupus", "Usar protector solar").
-cuidado("Bronquitis", "Evitar cambios bruscos de temperatura").
-cuidado("Bronquitis", "Uso de filtros purificadores").
-cuidado("Bronquitis", "Utilizar un humidificador de aire").
-cuidado("Bronquitis", "Beber mucha agua").
-cuidado("Osteoporosis", "Aporte de calcio a la dieta").
-cuidado("Osteoporosis", "Exposición al sol para vitamina D").
-cuidado("Osteoporosis", "Ejercicio físico").
-cuidado("Osteoporosis", "Evitar caídas").
-cuidado("Fibromialgia", "Ejercicio físico").
-cuidado("Fibromialgia", "Fortaleza muscular").
-cuidado("Fibromialgia", "Controlar el estrés").
-cuidado("Fibromialgia", "Evitar la fatiga").
-%Calculos Biliales
-cuidado("Calculos Biliales","Evitar el Sobrepeso").
-cuidado("Calculos Biliales", "Comer fibras y Liquidos").
-cuidado("Calculos Biliales", "Consumos de comidas altas en sodio").
-%Sindrome del Intestino Irritable
-cuidado("Sindrome del Intestino Irritable", "Evitar comidas copiosas, son preferibles comidas más frecuentes y menos abundantes.").
-cuidado("Sindrome del Intestino Irritable", "Evitar, en lo posible, las situaciones que le pongan nervioso o estresen.").
-cuidado("Sindrome del Intestino Irritable", "Realizar ejercicio físico adecuado a su edad y evitar el sedentarismo.").
-%Enfermedad Celiaca
-cuidado("Enfermedad Celiaca","Leer las etiquetas de los alimentos para descartar que contengan gluten ").
-%Colitis Ulserosa
-cuidado("Colitis Ulserosa", "Reduce la fibra si es un alimento problematico.").
-cuidado("Colitis Ulserosa", "Reduce el consumo de productos lacteos").
-cuidado("Colitis Ulserosa", "Come porciones pequeñas.").
-cuidado("Colitis Ulserosa", "Consumir probioticos.").
-cuidado("Colitis Ulserosa", "Consumir aceite de pescado.").
-%Reflujo Gastroesofagico
-cuidado("Reflujo Gastroesofagico", "Evitar bebidas como: café, cítricas, gaseosas.").
-cuidado("Reflujo Gastroesofagico", "Comer chocolate o menta.").
-cuidado("Reflujo Gastroesofagico", "Evitar las comidas grasosas").
-cuidado("Reflujo Gastroesofagico", "No Fumar").
+prevencion("Comer sanamente").
+prevencion("Hacer ejercicio").
+cuidado("Revisar el azúcar en la sangre").
+cuidado("Controlar el peso").
+cuidado("Visitar al médico con regularidad").
+cuidado("Disminuir consumo de sal").
+cuidado("No beber mucho alcohol").
+cuidado("Conocer sus síntomas").
+cuidado("Tomar lecturas").
+cuidado("Cuidarse al hacer ejercicio").
+cuidado("Perder peso").
+cuidado("Disminuir las grasas saturadas").
+cuidado("Chequeos cada cierto tiempo").
+cuidado("Llevar una vida ordenada").
+cuidado("Evitar el alcohol y el tabaco").
+cuidado("Evitar el abuso de medicación y cafeína").
+cuidado("No fumar").
+cuidado("Manejar el estrés").
+cuidado("No exponerse al sol").
+cuidado("Lavarse las manos").
+cuidado("Hidratarse").
+cuidado("Usar protector solar").
+cuidado("Evitar cambios bruscos de temperatura").
+cuidado("Uso de filtros purificadores").
+cuidado("Utilizar un humidificador de aire").
+cuidado("Beber mucha agua").
+cuidado("Aporte de calcio a la dieta").
+cuidado("Exposición al sol para vitamina D").
+cuidado("Evitar caídas").
+cuidado("Fortaleza muscular").
+cuidado("Controlar el estrés").
+cuidado("Evitar la fatiga").
+cuidado("Comer fibras y Liquidos").
+cuidado("Consumos de comidas altas en sodio").
+cuidado("Evitar comidas copiosas, son preferibles comidas más frecuentes y menos abundantes.").
+cuidado("Realizar ejercicio físico adecuado a su edad y evitar el sedentarismo.").
+cuidado("Leer las etiquetas de los alimentos para descartar que contengan gluten").
+cuidado("Reduce la fibra si es un alimento problematico.").
+cuidado("Reduce el consumo de productos lacteos").
+cuidado("Come porciones pequeñas.").
+cuidado("Consumir probioticos.").
+cuidado("Consumir aceite de pescado.").
+cuidado("Evitar bebidas como: café, cítricas, gaseosas.").
+cuidado("Comer chocolate o menta.").
+cuidado("Evitar las comidas grasosas").
 
 
 
