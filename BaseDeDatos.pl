@@ -56,24 +56,24 @@ sintoma("Tos con flemas").
 sintoma("Molestia en el pecho").
 sintoma("Dificultad para respirar").
 sintoma("Dolor de espalda").
-sintoma("Pérdida de estatura").
+sintoma("Perdida de estatura").
 sintoma("Postura encorvada").
 sintoma("Fractura de huesos con facilidad").
-sintoma("Dolor crónico del cuello").
-sintoma("Dolor crónico de la espalda").
+sintoma("Dolor cronico del cuello").
+sintoma("Dolor cronico de la espalda").
 sintoma("Trastornos del sueño").
 sintoma("Hipotiroidismo").
-sintoma("Depresión").
-sintoma("Cólico Biliar").
-sintoma("Coloración amarillenta de la piel ").
+sintoma("Depresion").
+sintoma("Colico Biliar").
+sintoma("Coloración amarillenta de la piel").
 sintoma("Nauseas ").
 sintoma("Dolor Abdominal").
 sintoma("Colicos").
 sintoma("Estreñimiento").
 sintoma("Diarrea").
-sintoma("Exceso de Gases")
+sintoma("Exceso de Gases").
 sintoma("Hinchazon").
-sintoma("Diarrea crónica").
+sintoma("Diarrea cronica").
 sintoma("Dolor en el recto").
 sintoma("Adelgazamiento").
 sintoma("Acidez").
@@ -96,8 +96,8 @@ tratamiento("Salbutamol").
 tratamiento("Ambuterol").
 tratamiento("Salmeterol").
 tratamiento("Bromuro de tiotropio").
-tratamiento("Análisis de sangre para el colesterol").
-tratamiento("Realizar el perfil lipídico").
+tratamiento("Analisis de sangre para el colesterol").
+tratamiento("Realizar el perfil lipidico").
 tratamiento("Uso de estaminas").
 tratamiento("Uso de hipolipemiantes").
 tratamiento("Acetaminofen").
@@ -110,10 +110,10 @@ tratamiento("Masajes").
 tratamiento("Antiinflamatorios no esteroideos").
 tratamiento("Corticoesteroides").
 tratamiento("Inmunodepresores").
-tratamiento("Antibióticos").
-tratamiento("Antitérmicos").
+tratamiento("Antibioticos").
+tratamiento("Antitermicos").
 tratamiento("Inhaladores").
-tratamiento("Hidratación").
+tratamiento("Hidratacion").
 tratamiento("Bifosfonatos").
 tratamiento("Calcitonina").
 tratamiento("Raloxifeno").
@@ -123,64 +123,65 @@ tratamiento("Anti convulsionantes").
 tratamiento("Cirugia").
 tratamiento("Sales biliares").
 tratamiento("Espasmoliticos").
-tratamiento("Procinéticos").
+tratamiento("Procineticos").
 tratamiento("Antidiarreicos").
 tratamiento("Laxantes").
-tratamiento("Ansiolíticos").
+tratamiento("Ansioliticos").
 tratamiento("Disminuir el contenido de Gluten de los Alimentos").
 tratamiento("Azatioprina").
 tratamiento("Antiacidos").
 tratamiento("Inhibidores de bomba de protones").
-tratamiento("Medicamentos Procinéticos").
+tratamiento("Medicamentos Procineticos").
+tratamiento(hola).
 
 
-%Cuidados
+%prevencion
 
 prevencion("Comer sanamente").
 prevencion("Hacer ejercicio").
-cuidado("Revisar el azúcar en la sangre").
-cuidado("Controlar el peso").
-cuidado("Visitar al médico con regularidad").
-cuidado("Disminuir consumo de sal").
-cuidado("No beber mucho alcohol").
-cuidado("Conocer sus síntomas").
-cuidado("Tomar lecturas").
-cuidado("Cuidarse al hacer ejercicio").
-cuidado("Perder peso").
-cuidado("Disminuir las grasas saturadas").
-cuidado("Chequeos cada cierto tiempo").
-cuidado("Llevar una vida ordenada").
-cuidado("Evitar el alcohol y el tabaco").
-cuidado("Evitar el abuso de medicación y cafeína").
-cuidado("No fumar").
-cuidado("Manejar el estrés").
-cuidado("No exponerse al sol").
-cuidado("Lavarse las manos").
-cuidado("Hidratarse").
-cuidado("Usar protector solar").
-cuidado("Evitar cambios bruscos de temperatura").
-cuidado("Uso de filtros purificadores").
-cuidado("Utilizar un humidificador de aire").
-cuidado("Beber mucha agua").
-cuidado("Aporte de calcio a la dieta").
-cuidado("Exposición al sol para vitamina D").
-cuidado("Evitar caídas").
-cuidado("Fortaleza muscular").
-cuidado("Controlar el estrés").
-cuidado("Evitar la fatiga").
-cuidado("Comer fibras y Liquidos").
-cuidado("Consumos de comidas altas en sodio").
-cuidado("Evitar comidas copiosas, son preferibles comidas más frecuentes y menos abundantes.").
-cuidado("Realizar ejercicio físico adecuado a su edad y evitar el sedentarismo.").
-cuidado("Leer las etiquetas de los alimentos para descartar que contengan gluten").
-cuidado("Reduce la fibra si es un alimento problematico.").
-cuidado("Reduce el consumo de productos lacteos").
-cuidado("Come porciones pequeñas.").
-cuidado("Consumir probioticos.").
-cuidado("Consumir aceite de pescado.").
-cuidado("Evitar bebidas como: café, cítricas, gaseosas.").
-cuidado("Comer chocolate o menta.").
-cuidado("Evitar las comidas grasosas").
+prevencion("Revisar el azúcar en la sangre").
+prevencion("Controlar el peso").
+prevencion("Visitar al medico con regularidad").
+prevencion("Disminuir consumo de sal").
+prevencion("No beber mucho alcohol").
+prevencion("Conocer sus síntomas").
+prevencion("Tomar lecturas").
+prevencion("Cuidarse al hacer ejercicio").
+prevencion("Perder peso").
+prevencion("Disminuir las grasas saturadas").
+prevencion("Chequeos cada cierto tiempo").
+prevencion("Llevar una vida ordenada").
+prevencion("Evitar el alcohol y el tabaco").
+prevencion("Evitar el abuso de medicación y cafeina").
+prevencion("No fumar").
+prevencion("Manejar el estres").
+prevencion("No exponerse al sol").
+prevencion("Lavarse las manos").
+prevencion("Hidratarse").
+prevencion("Usar protector solar").
+prevencion("Evitar cambios bruscos de temperatura").
+prevencion("Uso de filtros purificadores").
+prevencion("Utilizar un humidificador de aire").
+prevencion("Beber mucha agua").
+prevencion("Aporte de calcio a la dieta").
+prevencion("Exposición al sol para vitamina D").
+prevencion("Evitar caidas").
+prevencion("Fortaleza muscular").
+prevencion("Controlar el estres").
+prevencion("Evitar la fatiga").
+prevencion("Comer fibras y Liquidos").
+prevencion("Consumos de comidas altas en sodio").
+prevencion("Evitar comidas copiosas, son preferibles comidas más frecuentes y menos abundantes.").
+prevencion("Realizar ejercicio físico adecuado a su edad y evitar el sedentarismo.").
+prevencion("Leer las etiquetas de los alimentos para descartar que contengan gluten").
+prevencion("Reduce la fibra si es un alimento problematico.").
+prevencion("Reduce el consumo de productos lacteos").
+prevencion("Come porciones pequeñas.").
+prevencion("Consumir probioticos.").
+prevencion("Consumir aceite de pescado.").
+prevencion("Evitar bebidas como: cafe, citricas, gaseosas.").
+prevencion("Comer chocolate o menta.").
+prevencion("Evitar las comidas grasosas").
 
 
 
