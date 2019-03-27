@@ -26,77 +26,60 @@ enfermedad("Reflujo Gastroesofagico").
 
 %Sintomas
 
-sintoma("Diabetes", "Aumento de sed y orina").
-sintoma("Diabetes", "Aumento del apetito").
-sintoma("Diabetes", "Fatiga").
-sintoma("Diabetes", "Vision borrosa").
-sintoma("Diabetes", "Perdida de peso").
-sintoma("Hipertensión", "Dolor de cabeza").
-sintoma("Hipertensión", "Dificultad para respirar").
-sintoma("Hipertensión", "Sangrado nasal").
-sintoma("Asma", "Tos, con o sin flema").
-sintoma("Asma", "Tiraje de piel al respirar").
-sintoma("Asma", "Dificultad al respirar").
-sintoma("Dislipidemia", "Xantomas").
-sintoma("Dislipidemia", "Anillos opacos en el borde de la cornea").
-sintoma("Dislipidemia", "Hipertrofia del hígado o del bazo").
-sintoma("Dislipidemia", "Dificultad respiratoria").
-sintoma("Dislipidemia", "Riesgo de pancreatitis").
-sintoma("Cefalea", "Dolor de cabeza").
-sintoma("Cefalea", "Edema palpebral").
-sintoma("Cefalea", "Espasmos faciales").
-sintoma("Cefalea", "Enrojecimiento de ojos").
-sintoma("Cefalea", "Vertigo").
-sintoma("Migraña", "Nauseas").
-sintoma("Migraña", "Vomitos").
-sintoma("Migraña", "Hipersensibilidad a la luz").
-sintoma("Migraña", "Dolor de cabeza").
-sintoma("Migraña", "Adormecimiento de manos").
-sintoma("Lupus", "Dolor de articulaciones").
-sintoma("Lupus", "Vomitos").
-sintoma("Lupus", "Dolor muscular").
-sintoma("Lupus", "Fiebre").
-sintoma("Lupus", "Sensibilidad al sol").
-sintoma("Bronquitis", "Tos con flemas").
-sintoma("Bronquitis", "Molestia en el pecho").
-sintoma("Bronquitis", "Fatiga").
-sintoma("Bronquitis", "Fiebre").
-sintoma("Bronquitis", "Dificultad para respirar").
-sintoma("Osteoporosis", "Dolor de espalda").
-sintoma("Osteoporosis", "Pérdida de estatura").
-sintoma("Osteoporosis", "Postura encorvada").
-sintoma("Osteoporosis", "Fractura de huesos con facilidad").
-sintoma("Fibromialgia", "Dolor crónico del cuello").
-sintoma("Fibromialgia", "Dolor crónico de la espalda").
-sintoma("Fibromialgia", "Trastornos del sueño").
-sintoma("Fibromialgia", "Hipotiroidismo").
-sintoma("Fibromialgia", "Depresión").
-sintoma("Calculos Biliales","Fiebre").
-sintoma("Calculos Biliales","Vomitos").
-sintoma("Calculos Biliales","Cólico Biliar").
-sintoma("Calculos Biliales","Coloración amarillenta de la piel ").
-sintoma("Calculos Biliales","Nauseas ").
-%Sindrome del Intestino Irritable
-sintoma("Sindrome del Intestino Irritable","Dolor Abdominal").
-sintoma("Sindrome del Intestino Irritable","Cólicos").
-sintoma("Sindrome del Intestino Irritable","Estreñimiento").
-sintoma("Sindrome del Intestino Irritable","Diarrea").
-sintoma("Sindrome del Intestino Irritable","Exceso de Gases")
-%Enfermedad Celiaca
-sintoma("Enfermedad Celiaca","Hinchazon").
-sintoma("Enfermedad Celiaca","Diarrea crónica").
-sintoma("Enfermedad Celiaca","Estreñimiento").
-sintoma("Enfermedad Celiaca","Gases").
-sintoma("Enfermedad Celiaca","Nauseas").
-%Colitis Ulserosa
-sintoma("Colitis Ulserosa","Fiebre").
-sintoma("Colitis Ulserosa","Dolor en el recto ").
-sintoma("Colitis Ulserosa","Adelgazamiento").
-%Reflujo Gastroesofagico
-sintoma("Reflujo Gastroesofagico","Acidez").
-sintoma("Reflujo Gastroesofagico","Regurgitacion acida ").
-sintoma("Reflujo Gastroesofagico","Dolor de pecho ").
-sintoma("Reflujo Gastroesofagico","Jadeos ").
+sintoma("Aumento de sed y orina").
+sintoma("Aumento del apetito").
+sintoma("Fatiga").
+sintoma("Vision borrosa").
+sintoma("Perdida de peso").
+sintoma("Dolor de cabeza").
+sintoma("Dificultad para respirar").
+sintoma("Sangrado nasal").
+sintoma("Tos, con o sin flema").
+sintoma("Tiraje de piel al respirar").
+sintoma("Xantomas").
+sintoma("Anillos opacos en el borde de la cornea").
+sintoma("Hipertrofia del hígado o del bazo").
+sintoma("Riesgo de pancreatitis").
+sintoma("Edema palpebral").
+sintoma("Espasmos faciales").
+sintoma("Enrojecimiento de ojos").
+sintoma("Vertigo").
+sintoma("Nauseas").
+sintoma("Vomitos").
+sintoma("Hipersensibilidad a la luz").
+sintoma("Adormecimiento de manos").
+sintoma("Dolor de articulaciones").
+sintoma("Dolor muscular").
+sintoma("Fiebre").
+sintoma("Sensibilidad al sol").
+sintoma("Tos con flemas").
+sintoma("Molestia en el pecho").
+sintoma("Dificultad para respirar").
+sintoma("Dolor de espalda").
+sintoma("Pérdida de estatura").
+sintoma("Postura encorvada").
+sintoma("Fractura de huesos con facilidad").
+sintoma("Dolor crónico del cuello").
+sintoma("Dolor crónico de la espalda").
+sintoma("Trastornos del sueño").
+sintoma("Hipotiroidismo").
+sintoma("Depresión").
+sintoma("Cólico Biliar").
+sintoma("Coloración amarillenta de la piel ").
+sintoma("Nauseas ").
+sintoma("Dolor Abdominal").
+sintoma("Colicos").
+sintoma("Estreñimiento").
+sintoma("Diarrea").
+sintoma("Exceso de Gases")
+sintoma("Hinchazon").
+sintoma("Diarrea crónica").
+sintoma("Dolor en el recto").
+sintoma("Adelgazamiento").
+sintoma("Acidez").
+sintoma("Regurgitacion acida").
+sintoma("Dolor de pecho").
+sintoma("Jadeos").
 sintoma("Reflujo Gastroesofagico","Dolor de garganta").
 sintoma("Reflujo Gastroesofagico","Tos").
 
