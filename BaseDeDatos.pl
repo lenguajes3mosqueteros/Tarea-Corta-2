@@ -135,6 +135,20 @@ enfermedad("Calculos Biliares", Sintomas):-miembro(Sintomas, ["Colico Biliar", "
 enfermedad("Sindrome del Intestino Irritable", Sintomas):-miembro(Sintomas, ["Dolor Abdominal", "Colicos", "Estreñimiento", "Diarrea", "Exceso de Gases"]).
 enfermedad("Asma", Sintomas):-miembro(Sintomas, ["Tos", "Tiraje de piel al respirar", "Dificultad para respirar", "Sibilancias"]).
 
+%Busca en los hechos de enfermedad cual es la que funciona dependiendo de los 
+%sintomas que el paciente le ingrese a DrLog
+buscaEnfermedad(_,[]):-!.
+buscaEnfermedad(Padecimiento,[X|T]):-
+	enfermedad(Padecimiento,X), buscaEnfermedad(Padecimiento,T).
+
+%Cambiar esta descripcion ojo
+% Lee la entrada y la convierte en una lista de terminos atomicos
+:- [readline].
+
+consulta:- write('Bienvenido a Dr. Log'), nl, write('Para consultarle a Dr. Log, debes escribirle tres sintomas'), nl,
+ write('Cuando DrLog averigue que tienes, puedes preguntarle sobre tratamientos, causas y prevenciones'), nl, write('Escribe "iniciar." para iniciar la consulta', 'Para terminar la consulta escribe "adios".').
+iniciar: write('Su consulta con DrLog ha iniciado, proceda a preguntarle lo que necesita'), nl, readline(Input), drLog(Input),!.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 o --> sn(_Gen2,Num), sv(Num).
