@@ -47,30 +47,13 @@ tratamiento("Salbutamol").
 tratamiento("Ambuterol").
 tratamiento("Salmeterol").
 tratamiento("Bromuro de tiotropio").
-tratamiento("Analisis de sangre para el colesterol").
-tratamiento("Realizar el perfil lipidico").
-tratamiento("Uso de estaminas").
-tratamiento("Uso de hipolipemiantes").
-tratamiento("Acetaminofen").
-tratamiento("Antidepresivos como prevencion").
-tratamiento("Analgesicos antiinflamatorios").
+tratamiento("Antidepresivos").
+tratamiento("Analgesicos").
 tratamiento("Antiinflamatorios").
-tratamiento("Dieta balanceada").
 tratamiento("Acupuntura").
 tratamiento("Masajes").
-tratamiento("Antiinflamatorios no esteroideos").
 tratamiento("Corticoesteroides").
 tratamiento("Inmunodepresores").
-tratamiento("Antibioticos").
-tratamiento("Antitermicos").
-tratamiento("Inhaladores").
-tratamiento("Hidratacion").
-tratamiento("Bifosfonatos").
-tratamiento("Calcitonina").
-tratamiento("Raloxifeno").
-tratamiento("Teriparatida").
-tratamiento("Antidepresivos").
-tratamiento("Anti convulsionantes").
 tratamiento("Cirugia").
 tratamiento("Sales biliares").
 tratamiento("Espasmoliticos").
@@ -78,12 +61,6 @@ tratamiento("Procineticos").
 tratamiento("Antidiarreicos").
 tratamiento("Laxantes").
 tratamiento("Ansioliticos").
-tratamiento("Disminuir el contenido de Gluten de los Alimentos").
-tratamiento("Azatioprina").
-tratamiento("Antiacidos").
-tratamiento("Inhibidores de bomba de protones").
-tratamiento("Medicamentos Procineticos").
-tratamiento(hola).
 
 
 %prevencion
