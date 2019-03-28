@@ -41,7 +41,7 @@ sintoma("Exceso de Gases").
 %Tratamientos
 
 tratamiento("Diureticos de tiazida").
-tratamiento("Inhibidores de la enzima convertidora de angiotensin").
+tratamiento("Inhibidores de la enzima convertidora de angiotensina").
 tratamiento("Bloqueadores de los canales de calcio").
 tratamiento("Salbutamol").
 tratamiento("Ambuterol").
@@ -65,28 +65,26 @@ tratamiento("Ansioliticos").
 
 %prevencion
 
-prevencion("Hacer ejercicio").¿
 prevencion("Disminuir consumo de sal").
 prevencion("No beber mucho alcohol").
 prevencion("Conocer sus síntomas").
 prevencion("Tomar lecturas").
-prevencion("Cuidarse al hacer ejercicio").
-prevencion("Perder peso").
+prevencion("Controlar el peso").
 prevencion("No fumar").
 prevencion("Manejar el estres").
 prevencion("No exponerse al sol").
 prevencion("Lavarse las manos").
 prevencion("Hidratarse").
 prevencion("Usar protector solar").
-prevencion("Comer fibras y Liquidos").
+prevencion("No exponerse al sol").
+prevencion("Comer fibras y liquidos").
 prevencion("Consumos de comidas altas en sodio").
-prevencion("Evitar comidas copiosas, son preferibles comidas más frecuentes y menos abundantes.").
+prevencion("Evitar comidas copiosas").
 prevencion("Controlar el estres").
-prevencion("Realizar ejercicio físico adecuado a su edad y evitar el sedentarismo.").
+prevencion("Realizar ejercicio físico adecuado").
 prevencion("Conocer sus síntomas").
 prevencion("Aprender a tomar lecturas").
 prevencion("Conocer los desencadenantes").
-prevencion("Cuidar el ejercicio").
 
 %causas
 
@@ -109,12 +107,32 @@ causa("Quimicos en el aire").
 causa("Infecciones respiratorias").
 causa("Cambios en el clima").
 
+%Registro de las causas
+
 causas("Hipertension", "Antecedentes familiares, altos niveles de estres y mala alimentacion").
 causas("Asma", "Quimicos en el aire, infecciones respiratorias y cambios en el clima").
 causas("Migraña", "Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres").
 causas("Lupus", "Alteracion en el sistema inmunologico, genetica y exposicion a la luz").
 causas("Calculos Biliares", "Insuficiencia de la vesicula biliar, diabetes y cirrosis hepatica").
 causas("Sindrome del Intestino Irritable", "Eventos estresantes en la niñez, ansiedad y depresion").
+
+%Registro de los Tratamientos
+
+tratamientos("Hipertension", "Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio").
+tratamientos("Asma", "Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio").
+tratamientos("Migraña", "Analgesicos, antiinflamatorios, acupuntura y masajes").
+tratamientos("Lupus", "Antiinflamatorios, corticoesteroides e inmunodepresores").
+tratamientos("Calculos Biliares", "Antiimflamatorios, analgesicos, sales biliares y cirugía, si se requiere").
+tratamientos("Sindrome del Intestino Irritable", "Espasmolíticos, procinéticos, antidiarreicos, laxantes, antidepresivos y ansiolíticos").
+
+%Registro de las prevenciones
+
+prevenciones("Hipertension", "Disminuir consumo de sal, realizar ejercicio físico adecuado, controlar el peso y no beber mucho alcohol").
+prevenciones("Asma", "Conocer sus síntomas, aprender a tomar lecturas, conocer los desencadenantes y realizar ejercicio físico adecuado").
+prevenciones("Migraña", "No fumar, no beber mucho alcohol, hacer ejercicio y manejar el estres").
+prevenciones("Lupus", "No exponerse al sol, usar protector solar, hidratarse y lavarse las manos").
+prevenciones("Calculos Biliares", "Comer fibras y liquidos, consumir comidas altas en sodio y evitar comidas copiosas").
+prevenciones("Sindrome del Intestino Irritable", "Evitar comidas copiosas, controlar el estres y realizar ejercicio fisico adecuado").
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
