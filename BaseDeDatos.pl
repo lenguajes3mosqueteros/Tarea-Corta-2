@@ -65,51 +65,28 @@ tratamiento("Ansioliticos").
 
 %prevencion
 
-prevencion("Comer sanamente").
-prevencion("Hacer ejercicio").
-prevencion("Revisar el azúcar en la sangre").
-prevencion("Controlar el peso").
-prevencion("Visitar al medico con regularidad").
+prevencion("Hacer ejercicio").¿
 prevencion("Disminuir consumo de sal").
 prevencion("No beber mucho alcohol").
 prevencion("Conocer sus síntomas").
 prevencion("Tomar lecturas").
 prevencion("Cuidarse al hacer ejercicio").
 prevencion("Perder peso").
-prevencion("Disminuir las grasas saturadas").
-prevencion("Chequeos cada cierto tiempo").
-prevencion("Llevar una vida ordenada").
-prevencion("Evitar el alcohol y el tabaco").
-prevencion("Evitar el abuso de medicación y cafeina").
 prevencion("No fumar").
 prevencion("Manejar el estres").
 prevencion("No exponerse al sol").
 prevencion("Lavarse las manos").
 prevencion("Hidratarse").
 prevencion("Usar protector solar").
-prevencion("Evitar cambios bruscos de temperatura").
-prevencion("Uso de filtros purificadores").
-prevencion("Utilizar un humidificador de aire").
-prevencion("Beber mucha agua").
-prevencion("Aporte de calcio a la dieta").
-prevencion("Exposición al sol para vitamina D").
-prevencion("Evitar caidas").
-prevencion("Fortaleza muscular").
-prevencion("Controlar el estres").
-prevencion("Evitar la fatiga").
 prevencion("Comer fibras y Liquidos").
 prevencion("Consumos de comidas altas en sodio").
 prevencion("Evitar comidas copiosas, son preferibles comidas más frecuentes y menos abundantes.").
+prevencion("Controlar el estres").
 prevencion("Realizar ejercicio físico adecuado a su edad y evitar el sedentarismo.").
-prevencion("Leer las etiquetas de los alimentos para descartar que contengan gluten").
-prevencion("Reduce la fibra si es un alimento problematico.").
-prevencion("Reduce el consumo de productos lacteos").
-prevencion("Come porciones pequeñas.").
-prevencion("Consumir probioticos.").
-prevencion("Consumir aceite de pescado.").
-prevencion("Evitar bebidas como: cafe, citricas, gaseosas.").
-prevencion("Comer chocolate o menta.").
-prevencion("Evitar las comidas grasosas").
+prevencion("Conocer sus síntomas").
+prevencion("Aprender a tomar lecturas").
+prevencion("Conocer los desencadenantes").
+prevencion("Cuidar el ejercicio").
 
 
 
