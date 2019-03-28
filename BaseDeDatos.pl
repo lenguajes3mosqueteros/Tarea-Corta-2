@@ -11,36 +11,17 @@ enfermedad("Hipertensión").
 enfermedad("Asma").
 enfermedad("Migraña").
 enfermedad("Lupus").
-enfermedad("Bronquitis").
-enfermedad("Osteoporosis").
-enfermedad("Fibromialgia").
 enfermedad("Calculos Biliales").
 enfermedad("Sindrome del Intestino Irritable").
-enfermedad("Enfermedad Celiaca").
-enfermedad("Colitis Ulserosa").
-enfermedad("Reflujo Gastroesofagico").
 
 
 %Sintomas
 
-sintoma("Aumento de sed y orina").
-sintoma("Aumento del apetito").
-sintoma("Fatiga").
-sintoma("Vision borrosa").
-sintoma("Perdida de peso").
 sintoma("Dolor de cabeza").
 sintoma("Dificultad para respirar").
 sintoma("Sangrado nasal").
-sintoma("Tos, con o sin flema").
+sintoma("Tos").
 sintoma("Tiraje de piel al respirar").
-sintoma("Xantomas").
-sintoma("Anillos opacos en el borde de la cornea").
-sintoma("Hipertrofia del hígado o del bazo").
-sintoma("Riesgo de pancreatitis").
-sintoma("Edema palpebral").
-sintoma("Espasmos faciales").
-sintoma("Enrojecimiento de ojos").
-sintoma("Vertigo").
 sintoma("Nauseas").
 sintoma("Vomitos").
 sintoma("Hipersensibilidad a la luz").
@@ -49,46 +30,19 @@ sintoma("Dolor de articulaciones").
 sintoma("Dolor muscular").
 sintoma("Fiebre").
 sintoma("Sensibilidad al sol").
-sintoma("Tos con flemas").
-sintoma("Molestia en el pecho").
-sintoma("Dificultad para respirar").
-sintoma("Dolor de espalda").
-sintoma("Perdida de estatura").
-sintoma("Postura encorvada").
-sintoma("Fractura de huesos con facilidad").
-sintoma("Dolor cronico del cuello").
-sintoma("Dolor cronico de la espalda").
-sintoma("Trastornos del sueño").
-sintoma("Hipotiroidismo").
-sintoma("Depresion").
 sintoma("Colico Biliar").
 sintoma("Coloración amarillenta de la piel").
-sintoma("Nauseas ").
 sintoma("Dolor Abdominal").
 sintoma("Colicos").
 sintoma("Estreñimiento").
 sintoma("Diarrea").
 sintoma("Exceso de Gases").
-sintoma("Hinchazon").
-sintoma("Diarrea cronica").
-sintoma("Dolor en el recto").
-sintoma("Adelgazamiento").
-sintoma("Acidez").
-sintoma("Regurgitacion acida").
-sintoma("Dolor de pecho").
-sintoma("Jadeos").
-sintoma("Dolor de garganta").
-sintoma("Tos").
-
-
 
 %Tratamientos
 
-tratamiento("Metformina").
-tratamiento("Sulindaco").
-tratamiento("Insulina").
-tratamiento("Enapranil").
-tratamiento("Ibersartan").
+tratamiento("Diureticos de tiazida").
+tratamiento("Inhibidores de la enzima convertidora de angiotensin").
+tratamiento("Bloqueadores de los canales de calcio").
 tratamiento("Salbutamol").
 tratamiento("Ambuterol").
 tratamiento("Salmeterol").
