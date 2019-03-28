@@ -7,11 +7,8 @@
 
 %Enfermedades
 
-enfermedad("Diabetes").
 enfermedad("Hipertensión").
 enfermedad("Asma").
-enfermedad("Dislipidemia").
-enfermedad("Cefalea").
 enfermedad("Migraña").
 enfermedad("Lupus").
 enfermedad("Bronquitis").
