@@ -7,7 +7,7 @@
 
 %Enfermedades
 
-enfermedad("Hipertensión").
+enfermedad("Hipertension").
 enfermedad("Asma").
 enfermedad("Migraña").
 enfermedad("Lupus").
@@ -88,7 +88,33 @@ prevencion("Aprender a tomar lecturas").
 prevencion("Conocer los desencadenantes").
 prevencion("Cuidar el ejercicio").
 
+%causas
 
+causa("Anormalidad en serotonina").
+causa("Alimentos como queso añejo, vino tinto y chocolate").
+causa("Cambios hormonales en mujeres").
+causa("Alteracion en el sistema inmunologico").
+causa("Genetica").
+causa("Exposicion a la luz").
+causa("Antecedentes familiares").
+causa("Altos niveles de estres").
+causa("Mala alimentacion").
+causa("Insuficiencia de la vesicula biliar").
+causa("Diabetes").
+causa("Cirrosis hepatica").
+causa("Eventos estresantes durante la niñez").
+causa("Ansiedad").
+causa("Depresion").
+causa("Quimicos en el aire").
+causa("Infecciones respiratorias").
+causa("Cambios en el clima").
+
+causas("Hipertension", "Antecedentes familiares, altos niveles de estres y mala alimentacion").
+causas("Asma", "Quimicos en el aire, infecciones respiratorias y cambios en el clima").
+causas("Migraña", "Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres").
+causas("Lupus", "Alteracion en el sistema inmunologico, genetica y exposicion a la luz").
+causas("Calculos Biliares", "Insuficiencia de la vesicula biliar, diabetes y cirrosis hepatica").
+causas("Sindrome del Intestino Irritable", "Eventos estresantes en la niñez, ansiedad y depresion").
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
