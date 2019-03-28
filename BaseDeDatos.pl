@@ -5,16 +5,6 @@
 
 %Base de Datos de Enfermedades
 
-%Enfermedades
-
-enfermedad("Hipertension").
-enfermedad("Asma").
-enfermedad("Migraña").
-enfermedad("Lupus").
-enfermedad("Calculos Biliales").
-enfermedad("Sindrome del Intestino Irritable").
-
-
 %Sintomas
 
 sintoma("Dolor de cabeza").
@@ -22,6 +12,7 @@ sintoma("Dificultad para respirar").
 sintoma("Sangrado nasal").
 sintoma("Tos").
 sintoma("Tiraje de piel al respirar").
+sintoma("Sibilancias"):
 sintoma("Nauseas").
 sintoma("Vomitos").
 sintoma("Hipersensibilidad a la luz").
@@ -30,8 +21,9 @@ sintoma("Dolor de articulaciones").
 sintoma("Dolor muscular").
 sintoma("Fiebre").
 sintoma("Sensibilidad al sol").
+sintoma("Sarpullido enrojecido").
 sintoma("Colico Biliar").
-sintoma("Coloración amarillenta de la piel").
+sintoma("Coloracion amarillenta de la piel").
 sintoma("Dolor Abdominal").
 sintoma("Colicos").
 sintoma("Estreñimiento").
@@ -134,6 +126,14 @@ prevenciones("Lupus", "No exponerse al sol, usar protector solar, hidratarse y l
 prevenciones("Calculos Biliares", "Comer fibras y liquidos, consumir comidas altas en sodio y evitar comidas copiosas").
 prevenciones("Sindrome del Intestino Irritable", "Evitar comidas copiosas, controlar el estres y realizar ejercicio fisico adecuado").
 
+%Registro de las Enfermedades
+
+enfermedad("Migraña", Sintomas):-miembro(Sintomas, ["Nauseas", "Vomitos", "Hipersensibilidad a la luz", "Dolor de cabeza", "Adormecimiento de manos"]).
+enfermedad("Lupus", Sintomas):-miembro(Sintomas, ["Dolor de articulaciones", "Dolor muscular", "Fiebre", "Sensibilidad al sol", "Sarpullido enrojecido"]).
+enfermedad("Hipertension", Sintomas):-miembro(Sintomas, ["Dolor de cabeza", "Dificultad de respirar", "Sangrado nasal"]).
+enfermedad("Calculos Biliares", Sintomas):-miembro(Sintomas, ["Colico Biliar", "Fiebre", "Coloracion amarillenta de la piel", "Nauseas", "Vomitos"]).
+enfermedad("Sindrome del Intestino Irritable", Sintomas):-miembro(Sintomas, ["Dolor Abdominal", "Colicos", "Estreñimiento", "Diarrea", "Exceso de Gases"]).
+enfermedad("Asma", Sintomas):-miembro(Sintomas, ["Tos", "Tiraje de piel al respirar", "Dificultad para respirar", "Sibilancias"]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
