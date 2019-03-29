@@ -87,14 +87,14 @@ busca_enfermedad(Padecimiento,[X|T]):-
 	enfermedad(Padecimiento,X), busca_enfermedad(Padecimiento,T).
 
 
-% Lee la entrada y la convierte en una lista de terminos atomicos
+% Lee la entrada 'y' la convierte en una lista de terminos atomicos
 :- [readline].
 
 consulta:- write('Bienvenido a Dr. Log'), nl,
 			 write('El doctor realizara una consulta, debes decirle los sintomas'), nl,
 			 write('Ademas te dara tratamiento y causas de la enfermedad'), nl,
-			 write('La consulta cuesta $500, se acepta Visa, Mastercard y AmericanExpress'), nl,
-			 write('Escribe "comenzar." para iniciar la consulta. Para terminar la consulta, escribe "adios".').
+			 write('La consulta cuesta $500, se acepta Visa, Mastercard y AmericanExpress'),
+			 write('escribe "comenzar." para iniciar la consulta. Para terminar la consulta, escribe "adios".').
 comenzar :-
 	   write('----Consulta iniciada----'), nl,
        %read(Input),
@@ -139,6 +139,7 @@ match([], _,[]).
 lookup(Key, [(Key, Value)|_], Value).
 lookup(Key, [(Key1, _)|Dictionary], Value) :-
     \=(Key, Key1), lookup(Key, Dictionary, Value).
+
 % adding_memory
 add_mem(X,Predicate, Y) :-
 	print(X), nl, print(Predicate), nl, print(Y),
@@ -192,8 +193,7 @@ pattern([como, se, previene, la, A|_], ['Se puede prevenir la',A, se, debe,':'|T
 pattern([como, prevenimos, el, A|_], ['Buena pregunta, para prevenir el',A,':'|T]):-prevencion(A,T).
 pattern([como, prevenimos, la, A|_], ['Es importante para prevenir la',A,':'|T]):-prevencion(A,T).
 pattern([_,cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratar(A,T).
-pattern([_,cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-tratar(A,T).
-pattern([_,como, se, trata, el, A|_], ['Podemos tratar el',A, con,':'|T]):-tratar(A,T).
+pattern([_,cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-trpattern([_,como, se, trata, el, A|_], ['Podemos tratar el',A, con,':'|T]):-tratar(A,T).
 pattern([_,como, se, trata, la, A|_], ['Aconsejaria',':'|T]):-tratar(A,T).
 pattern([_,como, se, previene, el, A|_], ['Podemos prevenir el',A,':'|T]):-prevencion(A,T).
 pattern([_,como, se, previene, la, A|_], ['Se puede prevenir la',A, ':'|T]):-prevencion(A,T).
@@ -219,10 +219,3 @@ reply([Head|Tail]) :- write(Head), write(' '), reply(Tail).
 reply([]) :- nl.
 
 :- consulta.
-
-
-
-
-
-
-
