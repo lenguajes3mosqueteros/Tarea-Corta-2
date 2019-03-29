@@ -12,7 +12,7 @@ sintoma("Dificultad para respirar").
 sintoma("Sangrado nasal").
 sintoma("Tos").
 sintoma("Tiraje de piel al respirar").
-sintoma("Sibilancias"):
+sintoma("Sibilancias").
 sintoma("Nauseas").
 sintoma("Vomitos").
 sintoma("Hipersensibilidad a la luz").
@@ -101,42 +101,35 @@ causa("Cambios en el clima").
 
 %Registro de las causas
 
-causas("Hipertension", "Antecedentes familiares, altos niveles de estres y mala alimentacion").
-causas("Asma", "Quimicos en el aire, infecciones respiratorias y cambios en el clima").
-causas("Migraña", "Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres").
-causas("Lupus", "Alteracion en el sistema inmunologico, genetica y exposicion a la luz").
-causas("Calculos Biliares", "Insuficiencia de la vesicula biliar, diabetes y cirrosis hepatica").
-causas("Sindrome del Intestino Irritable", "Eventos estresantes en la niñez, ansiedad y depresion").
+causas('Hipertension', 'Antecedentes familiares, altos niveles de estres y mala alimentacion').
+causas('Asma', 'Quimicos en el aire, infecciones respiratorias y cambios en el clima').
+causas('Migrana', 'Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres').
+causas('Lupus', 'Alteracion en el sistema inmunologico, genetica y exposicion a la luz').
 
 %Registro de los Tratamientos
 
-tratamientos("Hipertension", "Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio").
-tratamientos("Asma", "Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio").
-tratamientos("Migraña", "Analgesicos, antiinflamatorios, acupuntura y masajes").
-tratamientos("Lupus", "Antiinflamatorios, corticoesteroides e inmunodepresores").
-tratamientos("Calculos Biliares", "Antiimflamatorios, analgesicos, sales biliares y cirugía, si se requiere").
-tratamientos("Sindrome del Intestino Irritable", "Espasmolíticos, procinéticos, antidiarreicos, laxantes, antidepresivos y ansiolíticos").
+tratamientos('Hipertension', 'Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio').
+tratamientos('Asma', 'Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio').
+tratamientos('Migrana', 'Analgesicos, antiinflamatorios, acupuntura y masajes').
+tratamientos('Lupus', 'Antiinflamatorios, corticoesteroides e inmunodepresores').
+
 
 %Registro de las prevenciones
 
-prevenciones("Hipertension", "Disminuir consumo de sal, realizar ejercicio físico adecuado, controlar el peso y no beber mucho alcohol").
-prevenciones("Asma", "Conocer sus síntomas, aprender a tomar lecturas, conocer los desencadenantes y realizar ejercicio físico adecuado").
-prevenciones("Migraña", "No fumar, no beber mucho alcohol, hacer ejercicio y manejar el estres").
-prevenciones("Lupus", "No exponerse al sol, usar protector solar, hidratarse y lavarse las manos").
-prevenciones("Calculos Biliares", "Comer fibras y liquidos, consumir comidas altas en sodio y evitar comidas copiosas").
-prevenciones("Sindrome del Intestino Irritable", "Evitar comidas copiosas, controlar el estres y realizar ejercicio fisico adecuado").
+prevenciones('Hipertension', 'Disminuir consumo de sal, realizar ejercicio físico adecuado, controlar el peso y no beber mucho alcohol').
+prevenciones('Asma', 'Conocer sus síntomas, aprender a tomar lecturas, conocer los desencadenantes y realizar ejercicio físico adecuado').
+prevenciones('Migrana', 'No fumar, no beber mucho alcohol, hacer ejercicio y manejar el estres').
+prevenciones('Lupus', 'No exponerse al sol, usar protector solar, hidratarse y lavarse las manos').
 
 %Registro de las Enfermedades
 
-enfermedad("Migraña", Sintomas):-miembro(Sintomas, ["Nauseas", "Vomitos", "Hipersensibilidad a la luz", "Dolor de cabeza", "Adormecimiento de manos"]).
-enfermedad("Lupus", Sintomas):-miembro(Sintomas, ["Dolor de articulaciones", "Dolor muscular", "Fiebre", "Sensibilidad al sol", "Sarpullido enrojecido"]).
-enfermedad("Hipertension", Sintomas):-miembro(Sintomas, ["Dolor de cabeza", "Dificultad de respirar", "Sangrado nasal"]).
-enfermedad("Calculos Biliares", Sintomas):-miembro(Sintomas, ["Colico Biliar", "Fiebre", "Coloracion amarillenta de la piel", "Nauseas", "Vomitos"]).
-enfermedad("Sindrome del Intestino Irritable", Sintomas):-miembro(Sintomas, ["Dolor Abdominal", "Colicos", "Estreñimiento", "Diarrea", "Exceso de Gases"]).
-enfermedad("Asma", Sintomas):-miembro(Sintomas, ["Tos", "Tiraje de piel al respirar", "Dificultad para respirar", "Sibilancias"]).
+enfermedad('Migrana', Sintomas):-miembro(Sintomas, [nauseas, vomitos, dolor, adormecimiento]).
+enfermedad('Lupus', Sintomas):-miembro(Sintomas, [dolor, fiebre, sensibilidad, sarpullido]).
+enfermedad('Hipertension', Sintomas):-miembro(Sintomas, [dolor, ahogamiento, sangrado]).
+enfermedad('Asma', Sintomas):-miembro(Sintomas, [tos, tiraje, ahogamiento, sibilancias]).
 
-trata(X):-tratar(X,L), write(L).
-preve(A):-prevencion(A,L), write(L).
+trata(X):-tratamientos(X,L), write(L).
+preve(A):-prevenciones(A,L), write(L).
 causa(B):-causas(B,L), write(L).
 
 buscaEnfermedad(_,[]):-!.
