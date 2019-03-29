@@ -151,12 +151,12 @@ agregar(X, L, [X|L]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Pregunta
 :- dynamic(pattern/1).
-pattern([_,_,como, esta |_],['Genial! Gracias por preguntar. Como esta usted?']).
-pattern([_,como, esta |_],['Genial! Gracias por preguntar. Como esta usted?']).
-pattern([como, esta |_],['Genial! Gracias por preguntar. Como esta usted?']).
-pattern([estoy, bien|_], ['A que debo tu visita, en ese caso?']).
-pattern([no, tan, bien], ['Por que?']).
-pattern([mal],['Te gustaria hablar sobre el tema?']).
+pattern([_,_,como, esta |_],['Muy bien Gracias. Como esta usted?']).
+pattern([_,como, esta |_],['Muy bien Gracias. Como esta usted?']).
+pattern([como, esta |_],['Muy bien Gracias. Como esta usted?']).
+pattern([estoy, bien|_], ['En que puedo ayudarle?']).
+pattern([no, tan, bien], ['Eso a que se debe?']).
+pattern([mal],['Eso es preocupante, que sucede?']).
 pattern([fatal],['Vaya! Por que?']).
 pattern([_,necesito,ayuda|_],['Por supuesto, estoy para ayudar, dime mas']).
 pattern([mi, X|_], ['Dime', mas, sobre, tu, X,'.']).
