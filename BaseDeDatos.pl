@@ -4,41 +4,37 @@
 % Luis Daniel Prieto Sibaja
 
 %Base de Datos de Enfermedades
-
+%
 %Registro de las Enfermedades junto con los sintomas (al menos 3) de cada una
-enfermedad('Hipertension', Sintomas):-miembro(Sintomas, [dolor, ahogamiento, sangrado]).
-enfermedad('Asma', Sintomas):-miembro(Sintomas, [tos, tiraje, ahogamiento, sibilancias]).
-enfermedad('Migrana', Sintomas):-miembro(Sintomas, [nauseas, vomitos, dolor, adormecimiento]).
-enfermedad('Lupus', Sintomas):-miembro(Sintomas, [dolor, fiebre, sensibilidad, sarpullido]).
-enfermedad('Gripe',Sintomas):-member(Sintomas,[tos, fiebre, estornudos, dolor, cansancio]).
+enfermedad(hipertension, Sintomas):-member(Sintomas, ['dolor', 'ahogamiento', 'sangrado']).
+enfermedad(asma, Sintomas):-member(Sintomas, ['tos', 'tiraje', 'ahogamiento', 'sibilancias']).
+enfermedad(migrana, Sintomas):-member(Sintomas, ['nauseas', 'vomitos', 'dolor', 'adormecimiento']).
+enfermedad(lupus, Sintomas):-member(Sintomas, ['dolor', 'fiebre', 'sensibilidad', 'sarpullido']).
+enfermedad(gripe,Sintomas):-member(Sintomas,['tos', 'fiebre', 'estornudos', 'dolor', 'cansancio']).
 
 %Registro de las causas, se busca por el nombre de su enfermedad
-causas('Hipertension', 'Antecedentes familiares, altos niveles de estres y mala alimentacion').
-causas('Asma', 'Quimicos en el aire, infecciones respiratorias y cambios en el clima').
-causas('Migrana', 'Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres').
-causas('Lupus', 'Alteracion en el sistema inmunologico, genetica y exposicion a la luz').
-causas('Gripe', 'Viruz de la influenza').
+causas(hipertension, ['Antecedentes familiares, altos niveles de estres y mala alimentacion']).
+causas(asma, ['Quimicos en el aire, infecciones respiratorias y cambios en el clima']).
+causas(migrana, ['Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres']).
+causas(lupus, ['Alteracion en el sistema inmunologico, genetica y exposicion a la luz']).
+causas(gripe, ['Viruz de la influenza']).
 
 %Registro de las prevenciones, se busca por el nombre de su enfermedad
-prevenciones('Hipertension', 'Disminuir el consumo de sal, realizar ejercicio físico adecuado, controlar el peso y no beber mucho alcohol').
-prevenciones('Asma', 'Conocer sus síntomas, aprender a tomar lecturas, conocer los desencadenantes y realizar ejercicio físico adecuado').
-prevenciones('Migrana', 'No fumar, no beber mucho alcohol, hacer ejercicio y manejar el estres').
-prevenciones('Lupus', 'No exponerse al sol, usar protector solar, hidratarse y lavarse las manos').
-prevenciones('Gripe', 'Lavarse las manos antes de comer y después de ir al baño, alimentarse balanceadamente y vacunarse').
+prevenciones(hipertension, ['Disminuir el consumo de sal, realizar ejercicio físico adecuado, controlar el peso y no beber mucho alcohol']).
+prevenciones(asma, ['Conocer sus síntomas, aprender a tomar lecturas, conocer los desencadenantes y realizar ejercicio físico adecuado']).
+prevenciones(migrana, ['No fumar, no beber mucho alcohol, hacer ejercicio y manejar el estres']).
+prevenciones(lupus, ['No exponerse al sol, usar protector solar, hidratarse y lavarse las manos']).
+prevenciones(gripe, ['Lavarse las manos antes de comer y después de ir al baño, alimentarse balanceadamente y vacunarse']).
 
 %Registro de los Tratamientos, se busca por el nombre de su enfermedad
-tratamientos('Hipertension', 'Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio').
-tratamientos('Asma', 'Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio').
-tratamientos('Migrana', 'Analgesicos, antiinflamatorios, acupuntura y masajes').
-tratamientos('Lupus', 'Antiinflamatorios, corticoesteroides e inmunodepresores').
-tratamientos('Gripe', 'Tomar antigripales por 3 dias, para el dolor tomar acetaminofen y descansar').
+tratamientos(hipertension, ['Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio']).
+tratamientos(asma, ['Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio']).
+tratamientos(migrana, ['Analgesicos, antiinflamatorios, acupuntura y masajes']).
+tratamientos(lupus, ['Antiinflamatorios, corticoesteroides e inmunodepresores']).
+tratamientos(gripe, ['Tomar antigripales por 3 dias, para el dolor tomar acetaminofen y descansar']).
 
-%Definicion de tratamientos, prevenciones y causas usando reglas
-trata(X):-tratamientos(X,L), write(L).
-preve(A):-prevenciones(A,L), write(L).
-causa(B):-causas(B,L), write(L).
-
-%Definicion de sintomas que se encuentran por medio de la enfermedad usando reglas
+% Definicion de sintomas que se encuentran por medio de la enfermedad
+% usando reglas
 buscaEnfermedad(_,[]):-!.
 buscaEnfermedad(Padecimiento,[X|T]):-
 	enfermedad(Padecimiento,X), buscaEnfermedad(Padecimiento,T).
@@ -46,7 +42,7 @@ buscaEnfermedad(Padecimiento,[X|T]):-
 %Cambiar esta descripcion ojo
 % Lee la entrada, asume las mayusculas y minusculas y convierte la oracion en una lista de terminos
 % atomicos donde cada palabra se separa por coma
-:- [readline].
+:-[readline].
 
 consulta:- write('Bienvenido a Dr. Log'), nl,
 	   write('Para consultarle a Dr. Log, debes escribirle tres sintomas'), nl,
@@ -63,7 +59,6 @@ drLog(['adios'|_]) :-
 	respuesta(['Adios, espero que te mejores']).
 drLog(['gracias'|_]) :-
 	respuesta(['Con gusto, espero que te mejores']).
-
 drLog([_,'adios'|_]) :-
 	respuesta(['Adios, espero que te mejores']).
 drLog([_,'gracias'|_]) :-
@@ -85,12 +80,12 @@ drLog(Input) :-
 	!, drLog(Input1).
 
 % matching the input to the Stimulus pair
-comparar([N|diccionario], Dicc, SalidaObjetivo) :-
+comparar([N|Diccionario], Dicc, SalidaObjetivo) :-
 	integer(N), buscarDiccionario(N,Dicc,Lt),
 	append(Lt,Rt, SalidaObjetivo),
-	comparar(diccionario, Dicc, Rt).
+	comparar(Diccionario, Dicc, Rt).
 
-comparar([Entrada|diccionario], Diccionario, [Entrada|SalidaObjetivo]) :-atom(Entrada), comparar(diccionario, Diccionario, SalidaObjetivo).
+comparar([Entrada|Diccionario], Diccionario1, [Entrada|SalidaObjetivo]) :-atom(Entrada), comparar(Diccionario, Diccionario1, SalidaObjetivo).
 
 comparar([], _ ,[]).
 
@@ -149,30 +144,30 @@ diccionario([_,tengo, A,B,y,C|_], ['Se ha presentado un caso',de,':',L]):-buscaE
 diccionario([_,_,tengo, A|_], ['Dime tres sintomas para poder diagnosticarte']).
 diccionario([_,_,tengo, A,y,B|_], ['En este caso',tienes,':',L]):-buscaEnfermedad(L,[A,B]).
 diccionario([_,_,tengo, A,B,y,C|_], ['En este caso',tienes,':',L]):-buscaEnfermedad(L,[A,B,C]).
-diccionario([cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([como, se, trata, el, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([como, se, trata, la, A|_], ['Para tratar la',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([como, se, previene, el, A|_], ['Se puede prevenir el',A,'de esta manera',':'|T]):-prevencion(A,T).
-diccionario([como, se, previene, la, A|_], ['Se puede prevenir la',A,'de esta manera',':'|T]):-prevencion(A,T).
-diccionario([como,puedo,prevenir, el, A|_], ['Para prevenir el',A, se, recomienda,':'|T]):-prevencion(A,T).
-diccionario([como, puedo, prevenir, la, A|_], ['Para prevenir la',A, se, recomienda, ':'|T]):-prevencion(A,T).
-diccionario([_,cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([_,cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([_,como, se, trata, el, A|_], ['Se puede tratar el',A, con,':'|T]):-tratar(A,T).
-diccionario([_,como, se, trata, la, A|_], ['Se puede tratar la',':'|T]):-tratar(A,T).
-diccionario([_,como, se, previene, el, A|_], ['Se puede prevenir el',A,':'|T]):-prevencion(A,T).
-diccionario([_,como, se, previene, la, A|_], ['Se puede prevenir la',A, ':'|T]):-prevencion(A,T).
-diccionario([_,como, puedo, prevenir, el, A|_], ['Para prevenir el',A,se,recomienda,':'|T]):-prevencion(A,T).
-diccionario([_,como, puedo, prevenir, la, A|_], ['Para prevenir la',A,se, debe,':'|T]):-prevencion(A,T).
-diccionario([_,_,cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([_,_,cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([_,_,como, se, trata, el, A|_], ['Para el',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([_,_,como, se, trata, la, A|_], ['Para tratar la',A, se, debe,':'|T]):-tratar(A,T).
-diccionario([_,_,como, se, previene, el, A|_], ['Se puede prevenir el',A,'de la siguiente manera',':'|T]):-prevencion(A,T).
-diccionario([_,_,como, se, previene, la, A|_], ['Se puede prevenir la',A, 'de la siguiente manera',':'|T]):-prevencion(A,T).
-diccionario([_,_,como, puedo, prevenir, el, A|_], ['Se puede prevenir',A,con,':'|T]):-prevencion(A,T).
-diccionario([_,_,como, puedo, prevenir, la, A|_], ['Se puede prevenir la',A,con,':'|T]):-prevencion(A,T).
+diccionario([cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, recomienda,':'|T]):-tratamientos(A,T).
+diccionario([cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, recomienda,':'|T]):-tratamientos(A,T).
+diccionario([como, se, trata, el, A|_], ['Para tratar el',A, se, recomienda,':'|T]):-tratamientos(A,T).
+diccionario([como, se, trata, la, A|_], ['Para tratar la',A, se, recomienda,':'|T]):-tratamientos(A,T).
+diccionario([como, se, previene, el, A|_], ['Se puede prevenir el',A,'de esta manera',':'|T]):-prevenciones(A,T).
+diccionario([como, se, previene, la, A|_], ['Se puede prevenir la',A,'de esta manera',':'|T]):-prevenciones(A,T).
+diccionario([como,puedo,prevenir, el, A|_], ['Para prevenir el',A, se, recomienda,':'|T]):-prevenciones(A,T).
+diccionario([como, puedo, prevenir, la, A|_], ['Para prevenir la',A, se, recomienda, ':'|T]):-prevenciones(A,T).
+diccionario([_,cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratamientos(A,T).
+diccionario([_,cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-tratamientos(A,T).
+diccionario([_,como, se, trata, el, A|_], ['Se puede tratar el',A, con,':'|T]):-tratamientos(A,T).
+diccionario([_,como, se, trata, la, A|_], ['Se puede tratar la',':'|T]):-tratamientos(A,T).
+diccionario([_,como, se, previene, el, A|_], ['Se puede prevenir el',A,':'|T]):-prevenciones(A,T).
+diccionario([_,como, se, previene, la, A|_], ['Se puede prevenir la',A, ':'|T]):-prevenciones(A,T).
+diccionario([_,como, puedo, prevenir, el, A|_], ['Para prevenir el',A,se,recomienda,':'|T]):-prevenciones(A,T).
+diccionario([_,como, puedo, prevenir, la, A|_], ['Para prevenir la',A,se, debe,':'|T]):-prevenciones(A,T).
+diccionario([_,_,cual, es, el, tratamiento, del, A|_], ['Para tratar el',A, se, debe,':'|T]):-tratamientos(A,T).
+diccionario([_,_,cual, es, el, tratamiento, de, la,A|_], ['Para tratar la',A, se, debe,':'|T]):-tratamientos(A,T).
+diccionario([_,_,como, se, trata, el, A|_], ['Para el',A, se, debe,':'|T]):-tratamientos(A,T).
+diccionario([_,_,como, se, trata, la, A|_], ['Para tratar la',A, se, debe,':'|T]):-tratamientos(A,T).
+diccionario([_,_,como, se, previene, el, A|_], ['Se puede prevenir el',A,'de la siguiente manera',':'|T]):-prevenciones(A,T).
+diccionario([_,_,como, se, previene, la, A|_], ['Se puede prevenir la',A, 'de la siguiente manera',':'|T]):-prevenciones(A,T).
+diccionario([_,_,como, puedo, prevenir, el, A|_], ['Se puede prevenir',A,con,':'|T]):-prevenciones(A,T).
+diccionario([_,_,como, puedo, prevenir, la, A|_], ['Se puede prevenir la',A,con,':'|T]):-prevenciones(A,T).
 diccionario([cual, es, la, causa, del, A|_], ['Algunas causas que provocaron el',A, son,':'|T]):-causas(A,T).
 diccionario([cual, es, la, causa, de, la, A|_], ['Algunas causas que provocaron la',A, son, ':'|T]):-causas(A,T).
 diccionario([cuales, son, las, causas, del, A|_], ['Algunas causas que provocaron el',A, son,':'|T]):-causas(A,T).
