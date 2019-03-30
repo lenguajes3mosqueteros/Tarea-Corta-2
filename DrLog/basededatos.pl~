@@ -7,6 +7,7 @@
 %
 %Registro de las Enfermedades junto con los sintomas (al menos 3) de cada una
 :- dynamic(enfermedad/2).
+:- dynamic(member/2).
 enfermedad(hipertension, Sintomas):-member(Sintomas, ['dolor', 'ahogamiento', 'sangrado']).
 enfermedad(asma, Sintomas):-member(Sintomas, ['tos', 'tiraje', 'ahogamiento', 'sibilancias']).
 enfermedad(migrana, Sintomas):-member(Sintomas, ['nauseas', 'vomitos', 'dolor', 'adormecimiento']).
