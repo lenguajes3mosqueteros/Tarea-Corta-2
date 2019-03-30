@@ -12,7 +12,7 @@ import org.jpl7.Query;
  *
  * @author Luis Prieto
  */
-public class DrLogUI extends javax.swing.JFrame {
+public class DrLogUI extends javax.swing.JFrame implements Runnable {
 
     /**
      * Creates new form DrLogUI
@@ -20,7 +20,6 @@ public class DrLogUI extends javax.swing.JFrame {
     public DrLogUI() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,6 +59,11 @@ public class DrLogUI extends javax.swing.JFrame {
         jTextArea1.getAccessibleContext().setAccessibleName("ConversacionTXT");
 
         jButton2.setText("Modificar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,33 +101,60 @@ public class DrLogUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    @Override
+    public void run() {
+        try
+        { 
+            System.out.println ("Thread " + Thread.currentThread().getId() + " is running"); 
+        } 
+        catch (Exception e) 
+        { 
+            System.out.println ("Exception is caught"); 
+        } 
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        System.out.println(jTextPane1.getText());
-        jTextArea1.setText(jTextPane1.getText());
+        try {
+            if(jTextPane1.getText().equals("iniciar.")) {
+                String pruebaConsulta = jTextPane1.getText();
+                Query con = new Query(pruebaConsulta);
+                jTextArea1.setText(con.oneSolution().get(jTextPane1.getText()).toString());
+            } else {
+                String pruebaConsulta = "drLog" + "(" + jTextPane1.getText() + ")";
+                Query con = new Query(pruebaConsulta);
+                jTextArea1.setText(con.oneSolution().get(jTextPane1.getText()).toString());
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        consultarA_Prolog();
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    /**
-     * @param args the command line arguments
-     */
-    public void consultarA_Prolog (){
         try {
-            String conexion = "consult('Dr_Log.pl')";
+            String conexion = "consult('BaseDeDatos.pl')";
             Query con = new Query(conexion);
-            System.out.println(conexion + " " + (con.hasMoreSolutions()? "aceptado": "Fallado"));
-            
-            String pruebaConsulta = "drLog(hola)";
-            Query con2 = new Query(pruebaConsulta);
-            System.out.println(con2.hasMoreSolutions());
+            jTextArea1.setText(conexion + " " + (con.hasMoreSolutions()? "aceptado": "Fallado"));
+            jTextArea1.setText(con.oneSolution().get(jTextPane1.getText()).toString());
         } catch (Exception e) {
         }
-    }
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String pruebaConsulta = jTextPane1.getText();
+            Query con = new Query(pruebaConsulta);
+            while(con.hasMoreSolutions()) {
+                String next = " ";
+                jTextArea1.setText(con.oneSolution().get("X").toString() + " " + next);
+                next = con.nextSolution().get("X").toString();
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
