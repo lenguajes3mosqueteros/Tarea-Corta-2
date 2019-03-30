@@ -6,6 +6,8 @@
 %Base de Datos de Enfermedades
 %
 %Registro de las Enfermedades junto con los sintomas (al menos 3) de cada una
+:- dynamic(enfermedad/2).
+:- dynamic(member/2).
 enfermedad(hipertension, Sintomas):-member(Sintomas, ['dolor', 'ahogamiento', 'sangrado']).
 enfermedad(asma, Sintomas):-member(Sintomas, ['tos', 'tiraje', 'ahogamiento', 'sibilancias']).
 enfermedad(migrana, Sintomas):-member(Sintomas, ['nauseas', 'vomitos', 'dolor', 'adormecimiento']).
@@ -13,6 +15,7 @@ enfermedad(lupus, Sintomas):-member(Sintomas, ['dolor', 'fiebre', 'sensibilidad'
 enfermedad(gripe,Sintomas):-member(Sintomas,['tos', 'fiebre', 'estornudos', 'dolor', 'cansancio']).
 
 %Registro de las causas, se busca por el nombre de su enfermedad
+:- dynamic(causas/2).
 causas(hipertension, ['Antecedentes familiares, altos niveles de estres y mala alimentacion']).
 causas(asma, ['Quimicos en el aire, infecciones respiratorias y cambios en el clima']).
 causas(migrana, ['Anormalidad en serotonina, alimentos como queso añejo, vino tinto y chocolate y los cambios hormonales en las mujeres']).
@@ -20,6 +23,7 @@ causas(lupus, ['Alteracion en el sistema inmunologico, genetica y exposicion a l
 causas(gripe, ['Viruz de la influenza']).
 
 %Registro de las prevenciones, se busca por el nombre de su enfermedad
+:- dynamic(prevenciones/2).
 prevenciones(hipertension, ['Disminuir el consumo de sal, realizar ejercicio físico adecuado, controlar el peso y no beber mucho alcohol']).
 prevenciones(asma, ['Conocer sus síntomas, aprender a tomar lecturas, conocer los desencadenantes y realizar ejercicio físico adecuado']).
 prevenciones(migrana, ['No fumar, no beber mucho alcohol, hacer ejercicio y manejar el estres']).
@@ -27,6 +31,7 @@ prevenciones(lupus, ['No exponerse al sol, usar protector solar, hidratarse y la
 prevenciones(gripe, ['Lavarse las manos antes de comer y después de ir al baño, alimentarse balanceadamente y vacunarse']).
 
 %Registro de los Tratamientos, se busca por el nombre de su enfermedad
+:- dynamic(tratamientos/2).
 tratamientos(hipertension, ['Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio']).
 tratamientos(asma, ['Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio']).
 tratamientos(migrana, ['Analgesicos, antiinflamatorios, acupuntura y masajes']).

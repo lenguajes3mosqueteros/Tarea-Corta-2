@@ -5,6 +5,7 @@
  */
 package drlog;
 
+//Importe de los Query para la interacción con la base de datos
 import org.jpl7.Query;
 
 
@@ -12,7 +13,7 @@ import org.jpl7.Query;
  *
  * @author Luis Prieto
  */
-public class DrLogUI extends javax.swing.JFrame implements Runnable {
+public class DrLogUI extends javax.swing.JFrame {
 
     /**
      * Creates new form DrLogUI
@@ -101,19 +102,8 @@ public class DrLogUI extends javax.swing.JFrame implements Runnable {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    @Override
-    public void run() {
-        try
-        { 
-            System.out.println ("Thread " + Thread.currentThread().getId() + " is running"); 
-        } 
-        catch (Exception e) 
-        { 
-            System.out.println ("Exception is caught"); 
-        } 
-    }
-    
+
+    //Función del botón que inicia la consulta con el DrLog
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try {
@@ -130,6 +120,7 @@ public class DrLogUI extends javax.swing.JFrame implements Runnable {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //Función del botón que inicia la consulta al archivo de Prolog
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         try {
@@ -141,16 +132,13 @@ public class DrLogUI extends javax.swing.JFrame implements Runnable {
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
+    //Función del botón que permite consultar directamente las enfermedades y modificar la base de datos
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try {
             String pruebaConsulta = jTextPane1.getText();
             Query con = new Query(pruebaConsulta);
-            while(con.hasMoreSolutions()) {
-                String next = " ";
-                jTextArea1.setText(con.oneSolution().get("X").toString() + " " + next);
-                next = con.nextSolution().get("X").toString();
-            }
+            jTextArea1.setText(con.oneSolution().get("X").toString());
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
