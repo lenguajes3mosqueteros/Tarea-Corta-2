@@ -90,11 +90,7 @@ busca_enfermedad(Padecimiento,[X|T]):-
 % Lee la entrada y la convierte en una lista de terminos atomicos
 :- [readline].
 
-consulta:- write('Bienvenido a Dr. Log'), nl,
-			 write('El doctor realizara una consulta, debes decirle los sintomas'), nl,
-			 write('Ademas te dara tratamiento y causas de la enfermedad'), nl,
-			 write('La consulta cuesta $500, se acepta Visa, Mastercard y AmericanExpress'), nl,
-			 write('Escribe "comenzar." para iniciar la consulta. Para terminar la consulta, escribe "adios".').
+consulta:- write('Escribe "comenzar." para iniciar la consulta. Para terminar la consulta, escribe "adios".').
 comenzar :-
 	   write('----Consulta iniciada----'), nl,
        %read(Input),
