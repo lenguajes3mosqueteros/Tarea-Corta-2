@@ -39,7 +39,6 @@ buscaEnfermedad(_,[]):-!.
 buscaEnfermedad(Padecimiento,[X|T]):-
 	enfermedad(Padecimiento,X), buscaEnfermedad(Padecimiento,T).
 
-%Cambiar esta descripcion ojo
 % Lee la entrada, asume las mayusculas y minusculas y convierte la oracion en una lista de terminos
 % atomicos donde cada palabra se separa por coma
 :-[readline].

@@ -97,7 +97,7 @@ buscarDiccionario(Key, [(Key1, _)|Diccionario], Value) :- not(Key = Key1), busca
 
 %Analisis de conversaciones y respuestas para el paciente
 
-:- dynamic(diccionario/1).
+:- dynamic(diccionario/2).
 %Saludos y respuestas para empezar la conversacion
 diccionario([buenas, noches], ['Hola', 'buenas noches', 'soy', 'DrLog.','¿En que te puedo ayudar?']).
 diccionario([buenas, tardes], ['Hola', 'buenas tardes,','soy','DrLog.','¿En que te puedo ayudar?']).
