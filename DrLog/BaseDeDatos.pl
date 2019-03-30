@@ -42,16 +42,12 @@ buscaEnfermedad(Padecimiento,[X|T]):-
 % Lee la entrada, asume las mayusculas y minusculas y convierte la oracion en una lista de terminos
 % atomicos donde cada palabra se separa por coma
 :-[readline].
-
-consulta:- write('Bienvenido a Dr. Log'), nl,
-	   write('Para consultarle a Dr. Log, debes escribirle tres sintomas'), nl,
-	   write('Cuando DrLog averigue que tienes, puedes preguntarle sobre tratamientos, causas y prevenciones'), nl,
-	   write('Escribe "iniciar." para iniciar la consulta. Para terminar la consulta escribe "adios".').
-
+consulta:- write('Bienvenido a Dr. Log, para realiizar una consulta escribe al menos tres sintomas. Escribe "iniciar." para iniciar la consulta. Para terminar la consulta escribe "adios"'), nl.
+%Inicia el ciclo del programa, dandole a drLog la primera instruccion del paciente
 iniciar:-
 	write('Su consulta con DrLog ha iniciado'), nl,
-	readline(Input),
-	drLog(Input),!.
+	readline(Entrada),
+	drLog(Entrada),!.
 
 %Reglas para terminar la consulta cuando un paciente se despide
 drLog(['adios'|_]) :-
@@ -69,30 +65,28 @@ drLog([_,_,'gracias'|_]) :-
 
 % Hace que DrLog siga la conversacion y despues de escribir la respuesta
 % espere una nueva solicitud por parte del paciente
-drLog(Input) :-
-	diccionario(Stim, Response),
-	comparar(Stim, Dicc, Input),
-	comparar(Response, Dicc, Output),
+drLog(Entrada) :-
+	diccionario(EntradaPaciente, RespuestaPredefinida),
+	comparar(EntradaPaciente, Dicc, Entrada),
+	comparar(RespuestaPredefinida, Dicc, RespuestaFinal),
 	write('DrLog: '),
-	respuesta(Output),
-	readline(Input1),
-	!, drLog(Input1).
+	respuesta(RespuestaFinal),
+	readline(NuevaEntrada),
+	!, drLog(NuevaEntrada).
 
-% matching the input to the Stimulus pair
+%Comparar la Entrada con la EntradaPaciente (opciones del diccionario) para
+%Enviar la Respuesta Final y si no coincide con ninguna, enviar la ultima opcion
+%de diccionario que seria pedirle de nuevo una frase
 comparar([N|Diccionario], Dicc, SalidaObjetivo) :-
 	integer(N), buscarDiccionario(N,Dicc,Lt),
 	append(Lt,Rt, SalidaObjetivo),
 	comparar(Diccionario, Dicc, Rt).
-
 comparar([Entrada|Diccionario], Diccionario1, [Entrada|SalidaObjetivo]) :-atom(Entrada), comparar(Diccionario, Diccionario1, SalidaObjetivo).
-
 comparar([], _ ,[]).
 
 %Buscar en el diccionario
-buscarDiccionario(Key, [(Key, Value)|_], Value).
-buscarDiccionario(Key, [(Key1, _)|Diccionario], Value) :- not(Key = Key1), buscarDiccionario(Key, Diccionario, Value).
-
-
+buscarDiccionario(Key, [(Key, Valor)|_], Valor).
+buscarDiccionario(Key, [(Key1, _)|Diccionario], Valor) :- not(Key = Key1), buscarDiccionario(Key, Diccionario, Valor).
 
 %Analisis de conversaciones y respuestas para el paciente
 

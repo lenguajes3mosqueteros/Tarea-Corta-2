@@ -39,16 +39,10 @@ buscaEnfermedad(_,[]):-!.
 buscaEnfermedad(Padecimiento,[X|T]):-
 	enfermedad(Padecimiento,X), buscaEnfermedad(Padecimiento,T).
 
-%Cambiar esta descripcion ojo
 % Lee la entrada, asume las mayusculas y minusculas y convierte la oracion en una lista de terminos
 % atomicos donde cada palabra se separa por coma
 :-[readline].
-
-consulta:- write('Bienvenido a Dr. Log'), nl,
-	   write('Para consultarle a Dr. Log, debes escribirle tres sintomas'), nl,
-	   write('Cuando DrLog averigue que tienes, puedes preguntarle sobre tratamientos, causas y prevenciones'), nl,
-	   write('Escribe "iniciar." para iniciar la consulta. Para terminar la consulta escribe "adios".').
-
+consulta:- write('Bienvenido a Dr. Log, para realiizar una consulta escribe al menos tres sintomas. Escribe "iniciar." para iniciar la consulta. Para terminar la consulta escribe "adios".), nl.
 iniciar:-
 	write('Su consulta con DrLog ha iniciado'), nl,
 	readline(Input),
