@@ -27,6 +27,7 @@ prevenciones(lupus, ['No exponerse al sol, usar protector solar, hidratarse y la
 prevenciones(gripe, ['Lavarse las manos antes de comer y después de ir al baño, alimentarse balanceadamente y vacunarse']).
 
 %Registro de los Tratamientos, se busca por el nombre de su enfermedad
+:-dynamic(tratamientos/2).
 tratamientos(hipertension, ['Diureticos de tiazida, inhibidores de la enzima convertidora de angiotensina y bloqueadores de los canales de calcio']).
 tratamientos(asma, ['Salbutamol, Ambuterol, Salmeterol, Bromuro de tiotropio']).
 tratamientos(migrana, ['Analgesicos, antiinflamatorios, acupuntura y masajes']).
